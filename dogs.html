@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title> AJA &#124; PetShop</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="dogs.css">
+ 	<link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://fontawesome.io/icons/" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://fontawesome.io/icons/" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <script src="https://kit.fontawesome.com/a8018f10c4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<div class="container">
+
+  <header class="header-fixed">
+
+  	<div class="header-limiter">
+  		<h1><a href="#">AJA<span>Pet Shop</span></a></h1>
+
+  		<nav>
+  			<a href="main.html">HOME</a>
+        <a href="dogtoy.html" class="selected">Gallery</a>
+  			<a href="dogtoy.html">Accesories & Toys</a>
+  			<a href="foods.html">Foods</a>
+        <a href="breeds.html">Breeds</a>
+  			<a href="care.html">Health Care</a>
+        <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+  		</nav>
+
+  	</div>
+
+  </header>
+
+  <!-- You need this element to prevent the content of the page from jumping up -->
+  <div class="header-fixed-placeholder"></div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script>
+
+  	$(document).ready(function(){
+
+  		var showHeaderAt = 150;
+
+  		var win = $(window),
+  				body = $('body');
+
+  		// Show the fixed header only on larger screen devices
+
+  		if(win.width() > 400){
+
+  			// When we scroll more than 150px down, we set the
+  			// "fixed" class on the body element.
+
+  			win.on('scroll', function(e){
+
+  				if(win.scrollTop() > showHeaderAt) {
+  					body.addClass('fixed');
+  				}
+  				else {
+  					body.removeClass('fixed');
+  				}
+  			});
+
+  		}
+
+  	});
+
+  </script>
+
+
+        <div class="mySlides">
+          <div class="numbertext">1 / 6</div>
+          <img src="dogs1.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">2 / 6</div>
+          <img src="dogs2.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">3 / 6</div>
+          <img src="dogs3.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">4 / 6</div>
+          <img src="dogs4.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">5 / 6</div>
+          <img src="dogs5.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">6 / 6</div>
+          <img src="dogs6.jpg" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+
+        <div class="row">
+          <div class="column">
+            <img class="demo cursor" src="dogs1.jpg" style="width:100%;height:80px;" onclick="currentSlide(1)" alt="Adorable Breeds">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="dogs2.jpg" style="width:100%;height:80px" onclick="currentSlide(2)" alt="Import from different countries">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="dogs3.png" style="width:100%;height:80px" onclick="currentSlide(3)" alt="Have quality time">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="dogs4.jpg" style="width:100%;height:80px" onclick="currentSlide(4)" alt="Create good memories with them">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="dogs5.jpg" style="width:100%;height:80px" onclick="currentSlide(5)" alt="Unforgettable Best Friend">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="dogs6.jpg" style="width:100%;height:80px" onclick="currentSlide(6)" alt="Our Best Friend">
+          </div>
+        </div>
+</div>
+      <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("demo");
+        let captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+      }
+      </script>
+
+    </body>
+  </html>

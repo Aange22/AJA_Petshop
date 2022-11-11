@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title> AJA &#124; PetShop</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="main.css">
+ <link rel="stylesheet" href="https://fontawesome.com/icons/paw?s=solid&f=classic">
+ <link href="https://fonts.googleapis.com/css2?family=Abel&family=Cairo:wght@600&family=Cormorant+Garamond:ital,wght@0,700;1,700&family=Dosis:wght@300&family=Faustina:wght@300&family=M+PLUS+2:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="index.html" id="home">HOME</a>
+    <a href="dogs.html" id="dogs">Dogs</a>
+    <a href="contact.html" id="contact">Contact</a>
+    <a href="about.html" id="about">About</a>
+
+  </div>
+
+  <div style="margin-left:80px;">
+    <h2>Welcome to AJA Pet Shop!</h2>
+    <p>Enjoy shopping with our most popular branded products. AJA Pet Shop is an extension of Vetfocus Care Animal Clinic<br> whose aim to provide affordable and quality products for your fur babies. </p>
+  </div>
+
+  <div class="container">
+      <input type="radio" name="slider" id="item-1" checked>
+      <input type="radio" name="slider" id="item-2">
+      <input type="radio" name="slider" id="item-3">
+    <div class="cards">
+      <label class="card" for="item-1" id="pet-1">
+        <img src="cuti.jpg" alt="song">
+      </label>
+      <label class="card" for="item-2" id="pet-2">
+        <img src="sale2.jpg" alt="song">
+      </label>
+      <label class="card" for="item-3" id="pet-3">
+        <img src="review.png" alt="song">
+      </label>
+    </div>
+    <div class="pets">
+      <div class="upper-part">
+        <div class="paw">
+          <i class="fa-solid fa-paw"></i>
+        </div>
+        <div class="info-area" id="test">
+          <label class="pet-info" id="pet-info-1">
+            <div class="title">Adorable Breeds</div>
+            <div class="sub-line">
+              <div class="subtitle">From different countries</div>
+            </div>
+          </label>
+          <label class="pet-info" id="pet-info-2">
+            <div class="title">Discounted and Branded Products</div>
+            <div class="sub-line">
+              <div class="subtitle">Enjoy our christmas sale and get your now!</div>
+            </div>
+          </label>
+          <label class="pet-info" id="pet-info-3">
+            <div class="title">Highly Rated Pet Shop</div>
+            <div class="sub-line">
+              <div class="subtitle">4.8 Ratings from our customers worldwide</div>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+$('input').on('change', function() {
+  $('body').toggleClass('blue');
+});
+</script>
+</body>
+</html>
